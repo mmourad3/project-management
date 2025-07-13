@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex lg:flex-row flex-col bg-gray-100 p-6 justify-center items-center gap-6 hero-animate">
+    <div className={`flex lg:flex-row flex-col bg-gray-100 p-6 justify-center items-center gap-6 hero-SlideUp`}>
       <section className="m-5 h-fit sm:w-full lg:w-1/4 p-6 md:p10 flex gap-6 flex-col items-center justify-center">
         <h1 className="text-4xl lg:text-5xl font-bold">
           Tasker brings all your tasks Teams & tools together

@@ -2,11 +2,12 @@
 @plugin "daisyui";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.hero-animate {
+.hero-SlideUp {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s forwards ease-out;
 }
+
 
 @keyframes fadeSlideUp {
   to {
@@ -49,4 +50,3 @@
 .featureScaleUp:hover {
   transform: scale(1.05);
 }
-
