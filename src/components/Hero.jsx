@@ -12,7 +12,6 @@ const Hero = () => {
     localStorage.setItem("fromHero", "true");
     navigate("/signup");
   };
-  
 
 
   return (
