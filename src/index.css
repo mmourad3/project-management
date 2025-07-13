@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hero-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s forwards ease-out;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.client-animate {
+  transition: transform 0.3s ease-out;
+}
+
+.client-animate:hover {
+  transform: scale(1.2);
+}
+
+.feature-text-animate {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeSlideRight 1s forwards ease-out;
+}
+@keyframes fadeSlideRight {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-animate{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s forwards ease-out;
+}
+.featureScaleUp {
+  transform: scale(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.featureScaleUp:hover {
+  transform: scale(1.05);
+}
+
