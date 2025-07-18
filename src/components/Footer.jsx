@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Home
                 </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/product"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Product
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/whats-new"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   What's New
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/pricing"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Pricing
                 </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/premium"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Premium
                 </Link>
@@ -85,7 +85,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/business"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Business
                 </Link>
@@ -93,7 +93,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/enterprise"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Enterprise
                 </Link>
@@ -101,7 +101,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/customer-success"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Customer Success
                 </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/asana-templates"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Asana Templates
                 </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/trust-and-security"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Trust & Security
                 </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/status"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Status
                 </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/enterprise"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Enterprise
                 </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/small-business"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Small Business
                 </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/personal-use"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Personal Use
                 </Link>
@@ -163,7 +163,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/remote-work"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Remote Work
                 </Link>
@@ -171,7 +171,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/startups"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Startups
                 </Link>
@@ -179,7 +179,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/education"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Education
                 </Link>
@@ -187,7 +187,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/nonprofits"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Nonprofits
                 </Link>
@@ -195,7 +195,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/engineering"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Engineering
                 </Link>
@@ -203,7 +203,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/product"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Product
                 </Link>
@@ -211,7 +211,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/design"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Design
                 </Link>
@@ -219,7 +219,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/managers"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Managers
                 </Link>
@@ -233,7 +233,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/phone-download"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   iOS & Android
                 </Link>
@@ -241,7 +241,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/laptop-download"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Mac & Windows
                 </Link>
@@ -249,7 +249,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/web-clipper"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Web Clipper
                 </Link>
@@ -260,7 +260,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/integrations"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Integrations
                 </Link>
@@ -268,7 +268,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/templates"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Templates
                 </Link>
@@ -276,7 +276,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/api-docs"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   API Docs
                 </Link>
@@ -284,7 +284,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/guides-and-tutorials"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Guides & Tutorials
                 </Link>
@@ -292,7 +292,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/find-a-consultant"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Find a Consultant
                 </Link>
@@ -300,7 +300,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/become-an-affiliate"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Become an Affiliate
                 </Link>
@@ -314,7 +314,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/switch-from-confluence"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Switch from Confluence
                 </Link>
@@ -322,7 +322,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/switch-from-asana"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Switch from Asana
                 </Link>
@@ -330,7 +330,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/switch-from-evernote"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Switch from Evernote
                 </Link>
@@ -341,7 +341,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/pricing"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Pricing
                 </Link>
@@ -349,7 +349,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about-us"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   About Us
                 </Link>
@@ -357,7 +357,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/careers"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Careers
                 </Link>
@@ -365,7 +365,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/media-kit"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Media Kit
                 </Link>
@@ -373,7 +373,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/email-us"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Email Us
                 </Link>
@@ -381,7 +381,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/cookie-settings"
-                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-50"
                 >
                   Cookie Settings
                 </Link>
