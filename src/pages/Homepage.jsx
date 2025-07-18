@@ -8,9 +8,9 @@ const Homepage = () => {
   
   return (
     <>
-      <Hero />
+      <Hero/>
       <TrustedClients />
-      <Features />
+      <Features/>
       <Footer />
     </>
   )

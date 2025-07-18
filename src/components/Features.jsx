@@ -14,18 +14,18 @@ const Features = () => {
 
   return (
     <>
-      <div className="flex p-20 gap-30 bg-gray-50">
-        <section ref={ref} className={`flex flex-col w-1/2 ${inView ? "feature-text-animate":""}`}>
+      <div className="flex flex-col md:flex-row p-20 md:justify-around bg-gray-50 dark:bg-gray-800 gap-4">
+        <section ref={ref} className={`flex flex-col justify-center text-center md:text-start md:items-start pl-5 w-full md:w-1/2 mb-10 md:mb-0 ${inView ? "feature-text-animate":""}`}>
           <p className="text-blue-400 mb-3">Learn about Features</p>
-          <h3 className="text-3xl font-bold mb-2">Our Top Features</h3>
-          <p>
+          <h3 className="dark:text-white text-5xl font-bold mb-2">Our Top Features</h3>
+          <p className= 'dark:text-white mt-4 text-xl'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
             praesentium facilis eligendi accusamus labore nobis unde sunt ab
             maiores ratione ex fuga dolore recusandae, enim nam! Laboriosam quia
             enim modi!
           </p>
         </section>
-        <div ref={ref} className={`grid grid-cols-2 flex gap-10 ${inView ? "feature-animate":""}`}>
+        <div ref={ref} className={`grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center md:mr-8 dark:text-black ${inView ? "feature-animate":""}`}>
           <Feature position={"up"} image={Tasks} title={"Tasks"} />
           <Feature image={TimeSlot} title={"Time Slots"} />
           <Feature position={"up"} image={Onboarding} title={"Onboarding"} />

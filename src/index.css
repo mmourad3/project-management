@@ -1,6 +1,12 @@
 @import 'tailwindcss';
 @plugin "daisyui";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --color-gray-custom: #1d232a;
+  --breakpoint-md:1024px;
+  
+}
+
 
 .hero-SlideUp {
   opacity: 0;
@@ -50,3 +56,8 @@
 .featureScaleUp:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
