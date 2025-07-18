@@ -43,37 +43,92 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-2">Tasker</h3>
             <ul className="leading-loose  text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/">Home</Link>
+                <Link
+                  to="/"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/product">Product</Link>
+                <Link
+                  to="/product"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Product
+                </Link>
               </li>
               <li>
-                <Link to="/whats-new">What's New</Link>
+                <Link
+                  to="/whats-new"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  What's New
+                </Link>
               </li>
               <li>
-                <Link to="/pricing">Pricing</Link>
+                <Link
+                  to="/pricing"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Pricing
+                </Link>
               </li>
               <li>
-                <Link to="/premium">Premium</Link>
+                <Link
+                  to="/premium"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Premium
+                </Link>
               </li>
               <li>
-                <Link to="/business">Business</Link>
+                <Link
+                  to="/business"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Business
+                </Link>
               </li>
               <li>
-                <Link to="/enterprise">Enterprise</Link>
+                <Link
+                  to="/enterprise"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Enterprise
+                </Link>
               </li>
               <li>
-                <Link to="/customer-success">Customer Success</Link>
+                <Link
+                  to="/customer-success"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Customer Success
+                </Link>
               </li>
               <li>
-                <Link to="/asana-templates">Asana Templates</Link>
+                <Link
+                  to="/asana-templates"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Asana Templates
+                </Link>
               </li>
               <li>
-                <Link to="/trust-and-security">Trust & Security</Link>
+                <Link
+                  to="/trust-and-security"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Trust & Security
+                </Link>
               </li>
               <li>
-                <Link to="/status">Status</Link>
+                <Link
+                  to="/status"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Status
+                </Link>
               </li>
             </ul>
           </div>
@@ -82,37 +137,92 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-2">Solutions</h3>
             <ul className="leading-loose text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/enterprise">Enterprise</Link>
+                <Link
+                  to="/enterprise"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Enterprise
+                </Link>
               </li>
               <li>
-                <Link to="/small-business">Small Business</Link>
+                <Link
+                  to="/small-business"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Small Business
+                </Link>
               </li>
               <li>
-                <Link to="/personal-use">Personal Use</Link>
+                <Link
+                  to="/personal-use"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Personal Use
+                </Link>
               </li>
               <li>
-                <Link to="/remote-work">Remote Work</Link>
+                <Link
+                  to="/remote-work"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Remote Work
+                </Link>
               </li>
               <li>
-                <Link to="/startups">Startups</Link>
+                <Link
+                  to="/startups"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Startups
+                </Link>
               </li>
               <li>
-                <Link to="/education">Education</Link>
+                <Link
+                  to="/education"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Education
+                </Link>
               </li>
               <li>
-                <Link to="/nonprofits">Nonprofits</Link>
+                <Link
+                  to="/nonprofits"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Nonprofits
+                </Link>
               </li>
               <li>
-                <Link to="/engineering">Engineering</Link>
+                <Link
+                  to="/engineering"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Engineering
+                </Link>
               </li>
               <li>
-                <Link to="/product">Product</Link>
+                <Link
+                  to="/product"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Product
+                </Link>
               </li>
               <li>
-                <Link to="/design">Design</Link>
+                <Link
+                  to="/design"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Design
+                </Link>
               </li>
               <li>
-                <Link to="/managers">Managers</Link>
+                <Link
+                  to="/managers"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Managers
+                </Link>
               </li>
             </ul>
           </div>
@@ -121,34 +231,79 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-2">Download</h3>
             <ul className="leading-loose text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/phone-download">iOS & Android</Link>
+                <Link
+                  to="/phone-download"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  iOS & Android
+                </Link>
               </li>
               <li>
-                <Link to="/laptop-download">Mac & Windows</Link>
+                <Link
+                  to="/laptop-download"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Mac & Windows
+                </Link>
               </li>
               <li>
-                <Link to="/web-clipper">Web Clipper</Link>
+                <Link
+                  to="/web-clipper"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Web Clipper
+                </Link>
               </li>
             </ul>
             <h3 className="text-lg font-bold mt-4 mb-2">Build</h3>
             <ul className="leading-loose text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/integrations">Integrations</Link>
+                <Link
+                  to="/integrations"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Integrations
+                </Link>
               </li>
               <li>
-                <Link to="/templates">Templates</Link>
+                <Link
+                  to="/templates"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Templates
+                </Link>
               </li>
               <li>
-                <Link to="/api-docs">API Docs</Link>
+                <Link
+                  to="/api-docs"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  API Docs
+                </Link>
               </li>
               <li>
-                <Link to="/guides-and-tutorials">Guides & Tutorials</Link>
+                <Link
+                  to="/guides-and-tutorials"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Guides & Tutorials
+                </Link>
               </li>
               <li>
-                <Link to="/find-a-consultant">Find a Consultant</Link>
+                <Link
+                  to="/find-a-consultant"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Find a Consultant
+                </Link>
               </li>
               <li>
-                <Link to="/become-an-affiliate">Become an Affiliate</Link>
+                <Link
+                  to="/become-an-affiliate"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Become an Affiliate
+                </Link>
               </li>
             </ul>
           </div>
@@ -157,34 +312,79 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-2">Get Started</h3>
             <ul className="leading-loose text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/switch-from-confluence">Switch from Confluence</Link>
+                <Link
+                  to="/switch-from-confluence"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Switch from Confluence
+                </Link>
               </li>
               <li>
-                <Link to="/switch-from-asana">Switch from Asana</Link>
+                <Link
+                  to="/switch-from-asana"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Switch from Asana
+                </Link>
               </li>
               <li>
-                <Link to="/switch-from-evernote">Switch from Evernote</Link>
+                <Link
+                  to="/switch-from-evernote"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Switch from Evernote
+                </Link>
               </li>
             </ul>
             <h3 className="text-lg font-bold mt-4 mb-2">Resources</h3>
             <ul className="leading-loose text-gray-600 dark:text-gray-300">
               <li>
-                <Link to="/pricing">Pricing</Link>
+                <Link
+                  to="/pricing"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Pricing
+                </Link>
               </li>
               <li>
-                <Link to="/about-us">About Us</Link>
+                <Link
+                  to="/about-us"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link to="/careers">Careers</Link>
+                <Link
+                  to="/careers"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Careers
+                </Link>
               </li>
               <li>
-                <Link to="/media-kit">Media Kit</Link>
+                <Link
+                  to="/media-kit"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Media Kit
+                </Link>
               </li>
               <li>
-                <Link to="/email-us">Email Us</Link>
+                <Link
+                  to="/email-us"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Email Us
+                </Link>
               </li>
               <li>
-                <Link to="/cookie-settings">Cookie Settings</Link>
+                <Link
+                  to="/cookie-settings"
+                  className="hover:text-gray-800 hover:text-[17px] dark:hover:text-gray-400"
+                >
+                  Cookie Settings
+                </Link>
               </li>
             </ul>
           </div>
@@ -192,9 +392,7 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center items-center p-4 mt-8">
-        <p className="text-gray-500 ">
-          © 2023 Tasker, Designed by Mumair
-        </p>
+        <p className="text-gray-500 ">© 2023 Tasker, Designed by Mumair</p>
       </div>
     </div>
   );
