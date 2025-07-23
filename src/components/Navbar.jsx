@@ -126,12 +126,14 @@ const Navbar = ({ user }) => {
 
           {!user ? (
             <div className="flex justify-evenly gap-3 mb-3 mt-4">
-              <NavLink to="/login">
-                <button className="btn bg-blue-500 hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500 text-white">
+              <NavLink to="/login" onClick={() => setIsMenuOpen(false)}>
+                <button
+                  className="btn bg-blue-500 hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500 text-white"
+                >
                   Login
                 </button>
               </NavLink>
-              <NavLink to="/signup">
+              <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
                 <button className="btn bg-blue-500 hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500 text-white">
                   Get Started
                 </button>

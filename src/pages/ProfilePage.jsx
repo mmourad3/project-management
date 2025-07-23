@@ -49,7 +49,19 @@ const ProfilePage = ({ user, deleteUser, setUser }) => {
           <strong>Email:</strong> {user.email}
         </p>
         <p className="mb-2">
-          <strong>Date of Birth:</strong> {user.dob}
+          <strong>Phone Number:</strong> {user.phone}
+        </p>
+        <p className="mb-2">
+          <strong>Company Name:</strong> {user.companyName}
+        </p>
+        <p className="mb-2">
+          <strong>Role:</strong> {user.role}
+        </p>
+        <p className="mb-2">
+          <strong>Experience Level:</strong> {user.level}
+        </p>
+        <p className="mb-2">
+          <strong>Workshop:</strong> {user.workshop}
         </p>
         <div className="flex justify-center">
           <button
