@@ -28,14 +28,15 @@ const SignUpPage = ({ signUpSubmit }) => {
     else{
       setIsFirstPartFilled(false)
     }
-  })
+  },[form.fullName, form.email, form.phone, form.password])
+
   useEffect(() => {
     if (form.companyName&& form.role && form.level) {
       setIsSecondPartFilled(true);
     } else {
       setIsSecondPartFilled(false);
     }
-  });
+  },[form.companyName, form.role, form.level]);
 
   const navigate = useNavigate();
 
