@@ -218,3 +218,4 @@ const SignUpPage = ({ signUpSubmit }) => {
 
 export default SignUpPage;
 
+
