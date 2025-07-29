@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./SignUpPage.css";
 
+
 const SignUpPage = ({ signUpSubmit }) => {
+  const formRef=useRef(null);
+
   const [form, setForm]=useState({
     fullName:"",
     email:"",
@@ -17,6 +20,7 @@ const SignUpPage = ({ signUpSubmit }) => {
   
   const [isFirstPartFilled, setIsFirstPartFilled]=useState(false);
   const [isSecondPartFilled, setIsSecondPartFilled]= useState(false);
+  const [step, setStep]=useState(1)
 
   const handleChange=(e)=>{
     setForm({...form, [e.target.name]:e.target.value})
@@ -79,140 +83,150 @@ const SignUpPage = ({ signUpSubmit }) => {
       level: "",
       workshop: ""
     });
-    toast.info("Form has been reset")
+    setStep(1);
+    toast.info("Form has been reset")    
   }
+  const next=()=>{
+    if (formRef.current.checkValidity()) {
+      setStep(step<3?step+1:3);
+    }
+    else{
+      formRef.current.reportValidity();
+    }
+  }
+
 
   return (
     <div className="layout">
-        <h1 className="createAcc">Create Your Account</h1>
-        <form onSubmit={handleSubmit} className="form">
-          <input
-            type="text"
-            placeholder="Full Name"
-            required
-            className="input"
-            name="fullName"
-            value={form.fullName}
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            required
-            className="input"
-            value={form.email}
-            onChange={handleChange}
-          />
-          <input
-            type="tel"
-            placeholder="Enter your 8-digit phone number"
-            name="phone"
-            required
-            className="input"
-            pattern="[0-9]{8}"
-            maxLength={8}
-            value={form.phone}
-            onChange={handleChange}
-          />
+      <h1 className="createAcc">Create Your Account</h1>
+      <form ref={formRef} onSubmit={handleSubmit} className="form">
+        <input
+          type="text"
+          placeholder="Full Name"
+          required
+          className="input"
+          name="fullName"
+          value={form.fullName}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          required
+          className="input"
+          value={form.email}
+          onChange={handleChange}
+        />
+        <input
+          type="tel"
+          placeholder="Enter your 8-digit phone number"
+          name="phone"
+          required
+          className="input"
+          pattern="[0-9]{8}"
+          maxLength={8}
+          value={form.phone}
+          onChange={handleChange}
+        />
 
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-            className="input"
-            minLength={8}
-            value={form.password}
-            onChange={handleChange}
-          />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+          className="input"
+          minLength={8}
+          value={form.password}
+          onChange={handleChange}
+        />
 
-          {isFirstPartFilled && (
-            <>
-              <input
-                type="text"
-                required
-                name="companyName"
-                className="input"
-                placeholder="Company Name"
-                value={form.companyName}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                placeholder="Role"
-                required
-                name="role"
-                className="input"
-                value={form.role}
-                onChange={handleChange}
-              />
-              <select
-                name="level"
-                value={form.level}
-                onChange={handleChange}
-                required
-                className="select"
-              >
-                <option className="options" value="">
-                  Select your Experience Level
-                </option>
-                <option className="options" value="Student">
-                  Student
-                </option>
-                <option className="options" value="Junior">
-                  Junior
-                </option>
-                <option className="options" value="Senior">
-                  Senior
-                </option>
-              </select>
-            </>
-          )}
-          {isSecondPartFilled && (
+        {isFirstPartFilled && step >= 2 && (
+          <>
+            <input
+              type="text"
+              required
+              name="companyName"
+              className="input"
+              placeholder="Company Name"
+              value={form.companyName}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              placeholder="Role"
+              required
+              name="role"
+              className="input"
+              value={form.role}
+              onChange={handleChange}
+            />
             <select
-              name="workshop"
-              value={form.workshop}
+              name="level"
+              value={form.level}
               onChange={handleChange}
               required
               className="select"
             >
               <option className="options" value="">
-                Select the Workshop
+                Select your Experience Level
               </option>
-              <option className="options" value="React">
-                React Workshop
+              <option className="options" value="Student">
+                Student
               </option>
-              <option className="options" value="AI">
-                AI Workshop
+              <option className="options" value="Junior">
+                Junior
+              </option>
+              <option className="options" value="Senior">
+                Senior
               </option>
             </select>
-          )}
-          <div className="buttons-div">
-            <button
-              type="button"
-              className={`${
-                isFirstPartFilled && isSecondPartFilled
-                  ? "reset-button-Filled"
-                  : "reset-button-NotFilled"
-              } reset-button`}
-              onClick={resetForm}
-            >
-              Reset
-            </button>
-            <button
-              type="submit"
-              className={`${
-                isFirstPartFilled && isSecondPartFilled
-                  ? "signup-buttonFilled"
-                  : "signup-buttonNotFilled"
-              }`}
-            >
-              Sign Up
-            </button>
-          </div>
-        </form>
-      </div>
+          </>
+        )}
+        {isSecondPartFilled && step == 3 && (
+          <select
+            name="workshop"
+            value={form.workshop}
+            onChange={handleChange}
+            required
+            className="select"
+          >
+            <option className="options" value="">
+              Select the Workshop
+            </option>
+            <option className="options" value="React">
+              React Workshop
+            </option>
+            <option className="options" value="AI">
+              AI Workshop
+            </option>
+          </select>
+        )}
+        <div className="buttons-div">
+          <button
+            type="button"
+            className={'reset-button'}
+            onClick={resetForm}
+          >
+            Reset
+          </button>
+          <button type="button" onClick={next} className={`${step==3?"hidden":""} next`}>
+            Next
+          </button>
+
+          <button
+            type="submit"
+            className={`${
+              isFirstPartFilled && isSecondPartFilled && step==3
+                ? "signup-buttonFilled"
+                : "signup-buttonNotFilled"
+            }`}
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

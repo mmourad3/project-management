@@ -68,13 +68,9 @@
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
-}
-.reset-button-Filled{
     width: 50%;
 }
-.reset-button-NotFilled{
-    width: 100%;
-}
+
 .reset-button:hover{
     background-color: #99a1af;
 }
@@ -96,6 +92,19 @@
 .buttons-div{
     display: flex;
     gap: 12px;
+}
+
+.next{
+    background-color: rgb(220, 20, 137);
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    color: white;
+}
+
+.next:hover{
+    background-color: rgb(255, 0, 149);
 }
 
 @media (prefers-color-scheme: dark) {
