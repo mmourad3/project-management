@@ -5,36 +5,34 @@ import { Link } from "react-router-dom";
 const ProfilePage = ({ user, deleteUser, setUser }) => {
   const navigate = useNavigate();
 
- if (!user) {
-   return (
-     <div className="min-h-screen flex flex-col items-center justify-center gap-10 dark:bg-gray-900">
-       <h2 className="text-2xl dark:text-white">
-         Please log in to view your profile.
-       </h2>
-       <Link
-         to="/login"
-         className="text-white bg-blue-500 hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500 rounded-md px-3 py-2"
-       >
-         Login
-       </Link>
-     </div>
-   );
- }
+  if (!user) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-10 dark:bg-gray-900">
+        <h2 className="text-2xl dark:text-white">
+          Please log in to view your profile.
+        </h2>
+        <Link
+          to="/login"
+          className="text-white bg-blue-500 hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500 rounded-md px-3 py-2"
+        >
+          Login
+        </Link>
+      </div>
+    );
+  }
 
-
-  const handleDelete=async () => {
-    const confirm=window.confirm(
+  const handleDelete = async () => {
+    const confirm = window.confirm(
       "Are you sure you want to delete your account?"
     );
     if (!confirm) return;
 
-    await deleteUser(user.id);
+    await deleteUser();
     navigate("/");
   };
   const handleLogOut = () => {
-    localStorage.removeItem("user");
-    setUser(null); 
-    navigate("/"); 
+    setUser(null);
+    navigate("/");
   };
 
   return (
@@ -83,4 +81,3 @@ const ProfilePage = ({ user, deleteUser, setUser }) => {
 };
 
 export default ProfilePage;
-

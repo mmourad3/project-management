@@ -5,6 +5,7 @@ import "./SignUpPage.css";
 
 
 const SignUpPage = ({ signUpSubmit }) => {
+    const navigate = useNavigate();
   const formRef=useRef(null);
 
   const [form, setForm]=useState({
@@ -42,7 +43,7 @@ const SignUpPage = ({ signUpSubmit }) => {
     }
   },[form.companyName, form.role, form.level]);
 
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     if (localStorage.getItem("fromHero") === "true") {
@@ -54,25 +55,31 @@ const SignUpPage = ({ signUpSubmit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const res = await fetch(
-        `http://localhost:5000/users?email=${encodeURIComponent(form.email)}`
-      );
-      const existing = await res.json();
-      if (existing.length > 0) {
-        toast.error("User with this email already exists");
+    const saved=localStorage.getItem("user");
+    if(saved){
+      const existingUser=JSON.parse(saved);
+      if(existingUser.email==form.email){
+        toast.error("Email already used");
         return;
       }
-      await signUpSubmit(form);
-      toast.success("Sign Up Successful");
-      navigate("/");
-    } catch (err) {
-      toast.error("Signup failed");
     }
+    try{
+      await signUpSubmit(form);
+      toast.success("Signed up successfully");
+      navigate("/");
+    }
+    catch(err){
+      toast.error(err.message);
+    }
+
+    
   };
 
   const resetForm=()=>{
+    const confirm = window.confirm(
+      "Are you sure you want to reset your form?"
+    );
+    if (!confirm) return;
     setForm({
       fullName: "",
       email: "",
@@ -94,12 +101,21 @@ const SignUpPage = ({ signUpSubmit }) => {
       formRef.current.reportValidity();
     }
   }
-
+const back=()=>{
+  setStep(step-1);
+}
 
   return (
     <div className="layout">
       <h1 className="createAcc">Create Your Account</h1>
       <form ref={formRef} onSubmit={handleSubmit} className="form">
+        <div className="steps">
+          <div className={`step ${step>=1 ?"step-secondary":""}`}></div>
+          <div className={`step ${step>=2 ?"step-secondary":""}`}></div>
+          <div className={`step ${step>=3 ?"step-secondary":""}`}></div>
+        </div>
+        {step==1&&(
+        <div>
         <input
           type="text"
           placeholder="Full Name"
@@ -140,8 +156,8 @@ const SignUpPage = ({ signUpSubmit }) => {
           value={form.password}
           onChange={handleChange}
         />
-
-        {isFirstPartFilled && step >= 2 && (
+</div>)}
+        {isFirstPartFilled && step == 2 && (
           <>
             <input
               type="text"
@@ -203,21 +219,21 @@ const SignUpPage = ({ signUpSubmit }) => {
           </select>
         )}
         <div className="buttons-div">
-          <button
-            type="button"
-            className={'reset-button'}
-            onClick={resetForm}
-          >
+                    <button type="button" onClick={back} className={`${step==1?"hidden":"back-button"}`}>Back</button>
+<button type="button" className={`${step==1?"reset-button":"reset-button-isFilled"}`} onClick={resetForm}>
             Reset
           </button>
-          <button type="button" onClick={next} className={`${step==3?"hidden":""} next`}>
+          <button
+            type="button"
+            onClick={next}
+            className={`${step == 3 ? "hidden" : "next"} ${step>=2?"next-isFilled":"next"}`}
+          >
             Next
           </button>
-
           <button
             type="submit"
             className={`${
-              isFirstPartFilled && isSecondPartFilled && step==3
+              isFirstPartFilled && isSecondPartFilled && step == 3
                 ? "signup-buttonFilled"
                 : "signup-buttonNotFilled"
             }`}

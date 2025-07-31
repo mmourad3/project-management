@@ -2,24 +2,21 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const LogInPage = ({loginSubmit}) => {
-  const [email, setEmail]=useState("");
-  const [password, setPassword]=useState("");
-  const navigate=useNavigate();
+const LogInPage = ({ loginSubmit }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit=async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const user=await loginSubmit(email, password);
-        toast.success("Logged in!");
-        navigate("/");
-      
-
+      toast.success("Logged in!");
+      navigate("/");
     } catch {
       toast.error("Invalid email or password");
     }
-    
   };
 
   return (
@@ -57,5 +54,3 @@ const LogInPage = ({loginSubmit}) => {
 };
 
 export default LogInPage;
-
-

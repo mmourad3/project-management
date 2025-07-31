@@ -12,6 +12,7 @@ import LogInPage from "./pages/LogInPage";
 import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+
 const App = () => {
   const [user, setUser]=useState(() => {
     const savedUser=localStorage.getItem("user");
@@ -19,34 +20,28 @@ const App = () => {
   });
 
   const signUp= async (newUser) => {
-    const res= await fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newUser),
-    });
-    const savedUser=await res.json();
-    localStorage.setItem("user", JSON.stringify(savedUser));
-    setUser(savedUser);
-    return savedUser;
+    const random =Math.random();
+    if (random<0.5){
+      localStorage.setItem("user",JSON.stringify(newUser));
+      setUser(newUser);
+      return newUser;
+    }
+    else{
+      throw new Error("Signup failed. Try again")
+    }
   };
 
   const login=async (email, password) => {
-    const res= await fetch(
-      `http://localhost:5000/users?email=${encodeURIComponent(
-        email
-      )}&password=${encodeURIComponent(password)}`
-    );
-    const users=await res.json();
-    if (users.length===1) {
-      localStorage.setItem("user", JSON.stringify(users[0]));
-      setUser(users[0]);
-      return users[0];
+    const savedUser=JSON.parse(localStorage.getItem("user"));
+    if (savedUser&& savedUser.email==email&& savedUser.password==password){
+      setUser(savedUser)
+      return savedUser
     }
-    throw new Error("Invalid email or password");
+    throw new Error("Invalid email or password")
+
   };
 
-  const deleteUser=async (id) => {
-    await fetch(`http://localhost:5000/users/${id}`, { method: "DELETE" });
+  const deleteUser=async () => {
     localStorage.removeItem("user");
     setUser(null);
   };
