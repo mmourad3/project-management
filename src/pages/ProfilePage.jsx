@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProfilePage = ({ user, deleteUser, setUser }) => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ const ProfilePage = ({ user, deleteUser, setUser }) => {
     if (!confirm) return;
 
     await deleteUser();
+    toast.success("Account deleted successfully")
     navigate("/");
   };
   const handleLogOut = () => {
@@ -64,13 +66,13 @@ const ProfilePage = ({ user, deleteUser, setUser }) => {
         <div className="flex justify-center">
           <button
             onClick={handleDelete}
-            className="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded mt-4 cursor-pointer"
+            className="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded mt-4 cursor-pointer w-1/3"
           >
             Delete Account
           </button>
           <button
             onClick={handleLogOut}
-            className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded mt-4 ml-4 cursor-pointer"
+            className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded mt-4 ml-4 cursor-pointer w-1/3"
           >
             Log Out
           </button>

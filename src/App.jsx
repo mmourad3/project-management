@@ -14,34 +14,58 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => {
+  const url = "http://localhost:3000";
   const [user, setUser]=useState(() => {
     const savedUser=localStorage.getItem("user");
-    return savedUser ? JSON.parse(savedUser):null;
+    if(!savedUser){
+      return null;
+    }
+    try {
+      return JSON.parse(savedUser);
+    } catch (error) {
+      return null;
+    }
   });
 
   const signUp= async (newUser) => {
-    const random =Math.random();
-    if (random<0.5){
-      localStorage.setItem("user",JSON.stringify(newUser));
-      setUser(newUser);
-      return newUser;
-    }
+    const res= await fetch(`${url}/signup`, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(newUser),
+    })
+    const data =await res.json();
+  if(data.success){
+    setUser(data.user);
+      localStorage.setItem("user",JSON.stringify(data.user));
+      return data.user;
+}
     else{
-      throw new Error("Signup failed. Try again")
+      throw new Error(data.message);
     }
   };
 
   const login=async (email, password) => {
-    const savedUser=JSON.parse(localStorage.getItem("user"));
-    if (savedUser&& savedUser.email==email&& savedUser.password==password){
-      setUser(savedUser)
-      return savedUser
-    }
+    const res=await fetch(`${url}/login`,{
+      method: 'POST',
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({email, password})
+    })
+const user=await res.json();
+if(user){
+  setUser(user);
+  localStorage.setItem("user", JSON.stringify(user));
+  return user;
+}
     throw new Error("Invalid email or password")
 
   };
 
   const deleteUser=async () => {
+    if(user){
+      await fetch(`${url}/${user.id}`,{
+        method:"DELETE"
+      })
+    }
     localStorage.removeItem("user");
     setUser(null);
   };

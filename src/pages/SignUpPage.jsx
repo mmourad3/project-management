@@ -55,14 +55,6 @@ const SignUpPage = ({ signUpSubmit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const saved=localStorage.getItem("user");
-    if(saved){
-      const existingUser=JSON.parse(saved);
-      if(existingUser.email==form.email){
-        toast.error("Email already used");
-        return;
-      }
-    }
     try{
       await signUpSubmit(form);
       toast.success("Signed up successfully");
