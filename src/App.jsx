@@ -14,7 +14,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => {
-  const url = "http://localhost:3000";
+  const url = "http://localhost:2000";
   const [user, setUser]=useState(() => {
     const savedUser=localStorage.getItem("user");
     if(!savedUser){
